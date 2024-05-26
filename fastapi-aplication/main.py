@@ -13,5 +13,11 @@ app.include_router(api_router, prefix=settings.api.prefix)
 async def root():
     return {"message": "Hello World"}
 
+
 if __name__ == "__main__":
-    uvicorn.run("main:app", reload=True)
+    uvicorn.run(
+        "main:app",
+        host=settings.run.host,
+        port=settings.run.port,
+        reload=True,
+    )
