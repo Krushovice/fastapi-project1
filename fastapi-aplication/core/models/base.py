@@ -13,14 +13,3 @@ class BaseModel(DeclarativeBase):
         return f"{camel_case_to_snake_case(cls.__name__)}s"
 
     id: Mapped[int] = mapped_column(primary_key=True)
-
-
-class User(BaseModel):
-    pass
-
-
-class UserPurchase(BaseModel):
-
-
-class Product(BaseModel):
-    pass
